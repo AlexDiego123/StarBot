@@ -1,7 +1,7 @@
 module.exports = {
     name: 'ban',
     guildOnly: true,
-    usage: '[Member Name]',
+    usage: 'ban [Member Tag]',
 	execute(message, args) {
         if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send(`${message.author.username} You Are Not Allowed To Do The Command __**ban**__`)
 
@@ -10,7 +10,6 @@ module.exports = {
         if (!message.mentions.users.size) {
             return message.reply('You Must Mention A Member To Ban Him');
         }
-        const taggedUser = message.mentions.users.first();
     
         const member = message.mentions.members.first();
         member.ban().then (message.channel.send(`${message.author.username} Member ${member} Has Been Banned From The Server`))
