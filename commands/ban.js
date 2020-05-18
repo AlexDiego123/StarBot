@@ -1,7 +1,7 @@
 module.exports = {
     name: 'ban',
     guildOnly: true,
-    usage: 'ban [Member Tag]',
+    usage: '[Member Tag]',
 	execute(message, args) {
         if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send(`${message.author.username} You Are Not Allowed To Do The Command __**ban**__`)
 
