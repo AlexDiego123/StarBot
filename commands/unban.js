@@ -8,7 +8,11 @@ module.exports = {
 		
 		if(!message.guild.me.hasPermission('BAN_MEMBERS')) return message.channel.send('I Don\'t Have Permission To Unban Members')
 
-		let unbanid = message.content.substring(message.content.indexOf(' ')+1)
+		let memberid = message.content.substring(message.content.indexOf(' ')+1)
+
+		let unbanid = message.guild.members.cache.get(memberid)
+
+		if(!unbanid) return message.channel.send('Member Not Found')
 
 		message.guild.members.unban(`${unbanid}`)
 		message.channel.send(`The Member ${unbanid} Has Been Unbanned From The Server`)
