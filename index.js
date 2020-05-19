@@ -49,4 +49,12 @@ try {
 }
 })
 
+client.on('guildCreate', async guild => {
+	client.user.setActivity(`---help | In ${client.guilds.cache.size} Servers`, { type: 'PLAYING' });
+});
+
+client.on('guildDelete', async guild => {
+	client.user.setActivity(`---help | In ${client.guilds.cache.size} Servers`, { type: 'PLAYING' });
+});
+
 client.login(token)
