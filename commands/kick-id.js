@@ -11,6 +11,8 @@ module.exports = {
         let memberId = message.content.substring(message.content.indexOf(' ')+1);
         let member = message.guild.members.cache.get(memberId);
 
+        if(!member.kickable) return message.channel.send('You Can\'t Kick A Moderator/Admin')
+
         if(member) {
             try {
                 member.kick();
