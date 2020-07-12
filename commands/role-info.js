@@ -4,7 +4,7 @@ module.exports = {
     guildOnly: 'true',
     usage: '[Role Name]',
 	execute(message, args) {
-        if(!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(`${message.author.username} Non Hai Il Permesso Di Fare Il Comando __**role-info**__`)
+        if(!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(`${message.author.username} You Don\'t Have Permission To Do The Command __**role-info**__`)
 
         if(!message.guild.me.hasPermission('MANAGE_ROLES')) return message.channel.send('I Don\'t Have Permission To View Role Information')
 
