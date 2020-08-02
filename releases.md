@@ -29,6 +29,6 @@
 
 ### Version 2
 
-### Coming On 2020/08/03
+### Coming On 03/08/2020 [dd/mm/yyyy]
 
 ### Spoiler:We Are Creating A Game Inside The Bot
