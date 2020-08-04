@@ -2,64 +2,36 @@
 
 ## [Home](index) [About](about)
 
-#### avatar
-
-#### 8ball
-
-#### kick
-
-#### kick-id
-
-#### ban
-
-#### ban-id
-
-#### utility
-
-#### moderation
-
-#### help
-
-#### games
-
-#### botstats
-
-#### botinfo
-
-#### mute
-
-#### unmute
-
-#### botchangelog
-
-#### config
-
-#### createtextchannel
-
-#### createvoicechannel
-
-#### deleterole
-
-#### createrole
-
-#### clear
-
-#### channel-info
-
-#### server-info
-
-#### server-info.adv
-
-#### user-info
-
-#### ping
-
-#### reload
-
-#### role-info
-
-#### invite
-
-#### emoji-info
-
-#### unban
+|Command|
+|:------|
+|avatar|
+|8ball|
+|ping|
+|reload|
+|ban|
+|ban-id|
+|kick|
+|kick-id|
+|utility|
+|help|
+|moderation|
+|config|
+|botstats|
+|botinfo|
+|botchangelog|
+|createtextchannel|
+|createvoicechannel|
+|createrole|
+|emoji-info|
+|deleterole|
+|server-info|
+|server-info.adv|
+|user-info|
+|games|
+|channel-info|
+|mute|
+|unban|
+|unmute|
+|role-info|
+|invite|
+|clear|
