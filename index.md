@@ -2,4 +2,4 @@
 
 ### With Fun,Moderation And Utility Commands!
 
-## [Commands](commands)
+## [Commands](commands) [About](about)
