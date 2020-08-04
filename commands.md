@@ -1,5 +1,7 @@
 ## StarBot Commands
 
+## [Home](index) [About](about)
+
 #### avatar
 
 #### 8ball
