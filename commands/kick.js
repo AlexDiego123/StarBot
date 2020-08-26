@@ -1,4 +1,4 @@
-const Client = require('discord.js')
+const Discord = require('discord.js')
 module.exports = {    
     name: 'kick',
     guildOnly: true,
@@ -17,6 +17,19 @@ module.exports = {
 
         if(!member.kickable) return message.channel.send(`${message.author.username} You Can\'t Kick A Moderator/Admin`)
 
-        member.kick().then (message.channel.send(`${message.author.username} The Mentioned Member Was Kicked From The Server`))
+        let reason = args.slice(1).join(' ')
+
+        if(!reason) {
+            reason = 'no reason'
+        }
+
+        const kickcommandembed = new Discord.MessageEmbed()
+        .setColor('ff0000')
+        .setTitle(`Kick`)
+        .setDescription(`:construction_worker: **Moderator:** ${message.author.username}\n\n:bust_in_silhouette: **Kicked User:** ${taggedUser.username}\n\n:page_facing_up: **Reason:** ${reason}`)
+        .setTimestamp()
+        .setFooter(`Command Executed By: ${message.author.username}`);
+
+        member.kick(reason).then (message.channel.send(kickcommandembed))
     }
 	}
