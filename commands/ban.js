@@ -1,3 +1,4 @@
+const Discord = require('discord.js')
 module.exports = {
     name: 'ban',
     guildOnly: true,
@@ -16,6 +17,20 @@ module.exports = {
 
         if(!member.bannable) return message.channel.send('You Can\'t Ban A Moderator/Admin')
 
-        member.ban().then (message.channel.send(`${message.author.username} Member ${member} Has Been Banned From The Server`))
+        let reason = args.slice(1).join(' ')
+
+        if(!reason) {
+            reason = 'no reason'
+        }
+
+        const bancommandembed = new Discord.MessageEmbed()
+        .setColor('ff0000')
+        .setTitle(`Ban`)
+        .setDescription(`:construction_worker: **Moderator:** ${message.author.username}\n\n:bust_in_silhouette: **Banned User:** ${taggedUser.username}\n\n:page_facing_up: **Reason:** ${reason}`)
+        .setTimestamp()
+        .setFooter(`Command Executed By: ${message.author.username}`);
+
+        member.ban({ reason: reason }).then (message.channel.send(bancommandembed))
+
     }
-	}
+    }
