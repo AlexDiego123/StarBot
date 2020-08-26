@@ -7,7 +7,8 @@ module.exports = {
 		.setColor('00ff00')
 		.setTitle(`:video_game: Games Commands`)
 		.addFields(
-			{ name: ':8ball: 8ball', value: 'Responds With A Random Answer.'}
+			{ name: ':8ball: 8ball', value: 'Responds With A Random Answer.'},
+			{ name: 'Coin Flip', value: 'Responds With Heads Or Tails'}
 		)
 		.setTimestamp()
 		.setFooter(`Command Executed By: ${message.author.username}`);
